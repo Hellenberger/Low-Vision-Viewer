@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="DfS-hY-8tC">
+    <device id="retina5_5" orientation="landscape" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Browser View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="BrowserViewController" modalTransitionStyle="crossDissolve" id="BYZ-38-t0r" customClass="BrowserViewController" customModule="Zoom_Reader" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="FCu-Cd-aZu">
+                        <rect key="frame" x="0.0" y="0.0" width="736" height="414"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <toolbar clipsSubviews="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="puo-HU-eTg">
+                                <rect key="frame" x="23" y="321" width="302" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <items>
+                                    <barButtonItem title="Back" image="lessthan" catalog="system" width="74.666664123535156" id="gbw-3C-pD7">
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <action selector="back:" destination="BYZ-38-t0r" id="BSt-lb-OP9"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Forward" image="greaterthan" catalog="system" width="75" id="paQ-9X-IZ0">
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <action selector="forward:" destination="BYZ-38-t0r" id="8eh-H5-jbt"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="4tu-TM-bVg"/>
+                                    <barButtonItem title="Refresh" image="arrow.clockwise" catalog="system" width="75" id="LZB-uR-o2d">
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <action selector="refresh:" destination="BYZ-38-t0r" id="zNp-dS-ab8"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Stop" image="xmark" catalog="system" width="76" id="1ig-c1-YaL">
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <action selector="stop:" destination="BYZ-38-t0r" id="Ai7-oP-weA"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </toolbar>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="aEO-sn-Tjj">
+                                <rect key="frame" x="147" y="127" width="20" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </activityIndicatorView>
+                            <wkWebView opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" multipleTouchEnabled="YES" contentMode="left" preservesSuperviewLayoutMargins="YES" allowsBackForwardNavigationGestures="YES" id="4BU-sy-Vw2">
+                                <rect key="frame" x="20" y="15" width="275" height="235"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <wkWebViewConfiguration key="configuration" allowsInlineMediaPlayback="YES">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" audio="YES"/>
+                                    <wkPreferences key="preferences" javaScriptCanOpenWindowsAutomatically="YES" minimumFontSize="5"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="feo-t0-STZ">
+                                <rect key="frame" x="134" y="268" width="81" height="18"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" image="yt_logo_rgb_light">
+                                    <color key="titleColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="youTube:" destination="BYZ-38-t0r" eventType="touchUpInside" id="59M-IA-Euh"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="WeK-Sn-faZ"/>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="0fj-gY-ne1">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="DYA-lz-BI3"/>
+                        <barButtonItem key="leftBarButtonItem" title="toCamera" image="camera.fill" catalog="system" id="TWo-fi-Rbe">
+                            <connections>
+                                <segue destination="o3b-uo-hXQ" kind="show" id="8o9-S7-7aU"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="ActInd" destination="aEO-sn-Tjj" id="BAQ-8E-3re"/>
+                        <outlet property="webView" destination="4BU-sy-Vw2" id="gvI-wx-8FD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="832.33695652173924" y="134.78260869565219"/>
+        </scene>
+        <!--Camera-->
+        <scene sceneID="xM1-jJ-CwR">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="Camera" storyboardName="Main" referencedIdentifier="Camera" id="o3b-uo-hXQ" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="GrG-qk-aue"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0e0-jA-bIp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1251" y="135"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="vD4-HI-Hb4">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="DfS-hY-8tC" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="V2F-ch-fUS">
+                        <rect key="frame" x="0.0" y="0.0" width="736" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Mr3-ZK-ly7"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="i4r-5a-8Wp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="138.58695652173915" y="134.78260869565219"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="arrow.clockwise" catalog="system" width="56" height="64"/>
+        <image name="camera.fill" catalog="system" width="64" height="48"/>
+        <image name="greaterthan" catalog="system" width="64" height="54"/>
+        <image name="lessthan" catalog="system" width="64" height="54"/>
+        <image name="xmark" catalog="system" width="64" height="56"/>
+        <image name="yt_logo_rgb_light" width="75" height="17"/>
+    </resources>
+</document>
